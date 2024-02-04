@@ -1,7 +1,9 @@
 package com.mustafa.soostone_pokemon.di
 
 import com.mustafa.soostone_pokemon.data.remote.PokemonApi
-import com.mustafa.soostone_pokemon.util.Constants
+import com.mustafa.soostone_pokemon.data.remote.PokemonRepositoryImpl
+import com.mustafa.soostone_pokemon.domain.repository.PokemonRepository
+import com.mustafa.soostone_pokemon.domain.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,6 +40,14 @@ object AppModule {
             .build()
             .create(PokemonApi::class.java)
 
+    }
+
+    @Provides
+    @Singleton
+    fun providePokemonRepository(
+        pokemonApi: PokemonApi
+    ): PokemonRepository {
+        return PokemonRepositoryImpl(pokemonApi)
     }
 
 

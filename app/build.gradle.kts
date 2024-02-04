@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.mustafa.soostone_pokemon"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.mustafa.soostone_pokemon"
@@ -32,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -52,6 +52,9 @@ android {
 }
 
 dependencies {
+    val nav_version = "2.7.6"
+    val lifecycle_version = "2.7.0"
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
@@ -72,6 +75,8 @@ dependencies {
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
+
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -88,6 +93,11 @@ dependencies {
     // Http Logging interceptor
     implementation ("com.squareup.okhttp3:logging-interceptor:4.10.0")
 
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
 
 }
 
