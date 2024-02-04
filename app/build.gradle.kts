@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -76,7 +74,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0.")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Gson
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
