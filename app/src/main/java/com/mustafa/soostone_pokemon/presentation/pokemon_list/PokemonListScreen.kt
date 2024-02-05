@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mustafa.soostone_pokemon.data.remote.dto.Pokemon
+import com.mustafa.soostone_pokemon.presentation.common.ErrorContent
 import com.mustafa.soostone_pokemon.presentation.common.PokemonCard
 import com.mustafa.soostone_pokemon.presentation.common.PokemonTopAppBar
 
@@ -43,7 +44,7 @@ fun PokemonListScreen(
                 }
 
                 is PokemonListState.Error -> {
-
+                    ErrorContent(message = state.errorMessage)
                 }
 
                 is PokemonListState.Success -> {
