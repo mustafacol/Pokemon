@@ -1,3 +1,4 @@
+
 <h1 align="center">Soostone Pokemon</h1>
 
 
@@ -14,6 +15,7 @@
 - [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
 - Jetpack
     - [Compose](https://developer.android.com/jetpack/compose): Jetpack Compose is Android’s recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
+    - [Navigation](https://developer.android.com/jetpack/compose/navigation) The Navigation component provides support for Jetpack Compose applications. You can navigate between composables while taking advantage of the Navigation component's infrastructure and features.
     - Lifecycle: Observe Android lifecycles and handle UI states upon the lifecycle changes.
     - ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.
     - [Hilt](https://dagger.dev/hilt/): for dependency injection.
@@ -51,7 +53,3 @@ The data Layer consists of repositories, which include business logic, such as q
 ### Domain Layer
 
 The domain layer is responsible for encapsulating complex business logic, or simple business logic that is reused by multiple ViewModels. This layer is optional because not all apps will have these requirements. You should use it only when needed—for example, to handle complexity or favor reusability.
-
-
-
-```
