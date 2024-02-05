@@ -1,3 +1,4 @@
+
 <h1 align="center">Soostone Pokemon</h1>
 
 
@@ -51,7 +52,3 @@ The data Layer consists of repositories, which include business logic, such as q
 ### Domain Layer
 
 The domain layer is responsible for encapsulating complex business logic, or simple business logic that is reused by multiple ViewModels. This layer is optional because not all apps will have these requirements. You should use it only when needed—for example, to handle complexity or favor reusability.
-
-
-
-```
